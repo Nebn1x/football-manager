@@ -1,0 +1,358 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: Nebnix
+      changes:
+        # Команди
+        - insert:
+            tableName: team
+            columns:
+              - column:
+                  name: name
+                  value: Team A
+              - column:
+                  name: account_balance
+                  value: 1000000
+              - column:
+                  name: commission_percentage
+                  value: 5.0
+        - insert:
+            tableName: team
+            columns:
+              - column:
+                  name: name
+                  value: Team B
+              - column:
+                  name: account_balance
+                  value: 2000000
+              - column:
+                  name: commission_percentage
+                  value: 3.0
+        - insert:
+            tableName: team
+            columns:
+              - column:
+                  name: name
+                  value: Team C
+              - column:
+                  name: account_balance
+                  value: 1500000
+              - column:
+                  name: commission_percentage
+                  value: 4.0
+        - insert:
+            tableName: team
+            columns:
+              - column:
+                  name: name
+                  value: Team D
+              - column:
+                  name: account_balance
+                  value: 2500000
+              - column:
+                  name: commission_percentage
+                  value: 2.5
+        # Гравці для Team A
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player A1
+              - column:
+                  name: age
+                  value: 22
+              - column:
+                  name: experience_months
+                  value: 24
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team A')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player A2
+              - column:
+                  name: age
+                  value: 25
+              - column:
+                  name: experience_months
+                  value: 36
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team A')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player A3
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: experience_months
+                  value: 48
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team A')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player A4
+              - column:
+                  name: age
+                  value: 23
+              - column:
+                  name: experience_months
+                  value: 30
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team A')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player A5
+              - column:
+                  name: age
+                  value: 26
+              - column:
+                  name: experience_months
+                  value: 42
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team A')
+        # Гравці для Team B
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player B1
+              - column:
+                  name: age
+                  value: 24
+              - column:
+                  name: experience_months
+                  value: 28
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team B')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player B2
+              - column:
+                  name: age
+                  value: 28
+              - column:
+                  name: experience_months
+                  value: 50
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team B')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player B3
+              - column:
+                  name: age
+                  value: 21
+              - column:
+                  name: experience_months
+                  value: 18
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team B')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player B4
+              - column:
+                  name: age
+                  value: 29
+              - column:
+                  name: experience_months
+                  value: 60
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team B')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player B5
+              - column:
+                  name: age
+                  value: 30
+              - column:
+                  name: experience_months
+                  value: 72
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team B')
+        # Гравці для Team C
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player C1
+              - column:
+                  name: age
+                  value: 20
+              - column:
+                  name: experience_months
+                  value: 12
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team C')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player C2
+              - column:
+                  name: age
+                  value: 23
+              - column:
+                  name: experience_months
+                  value: 24
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team C')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player C3
+              - column:
+                  name: age
+                  value: 26
+              - column:
+                  name: experience_months
+                  value: 36
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team C')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player C4
+              - column:
+                  name: age
+                  value: 25
+              - column:
+                  name: experience_months
+                  value: 30
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team C')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player C5
+              - column:
+                  name: age
+                  value: 28
+              - column:
+                  name: experience_months
+                  value: 48
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team C')
+        # Гравці для Team D
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player D1
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: experience_months
+                  value: 42
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team D')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player D2
+              - column:
+                  name: age
+                  value: 22
+              - column:
+                  name: experience_months
+                  value: 18
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team D')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player D3
+              - column:
+                  name: age
+                  value: 24
+              - column:
+                  name: experience_months
+                  value: 30
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team D')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player D4
+              - column:
+                  name: age
+                  value: 29
+              - column:
+                  name: experience_months
+                  value: 60
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team D')
+        - insert:
+            tableName: player
+            columns:
+              - column:
+                  name: name
+                  value: Player D5
+              - column:
+                  name: age
+                  value: 21
+              - column:
+                  name: experience_months
+                  value: 24
+              - column:
+                  name: team_id
+                  valueComputed: (SELECT id FROM team WHERE name='Team D')
