@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "38606ff4-36be-4c77-b3c3-484af14a181e",
+		"name": "Football_manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40371217"
+	},
+	"item": [
+		{
+			"name": "CRUD Teams",
+			"item": [
+				{
+					"name": "Create Team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Team E\",\r\n    \"accountBalance\": 3000000,\r\n    \"commissionPercentage\": 3.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/teams"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Team",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Team E\",\r\n    \"accountBalance\": 3000000,\r\n    \"commissionPercentage\": 4.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/teams/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/teams/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/teams"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Team",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/teams/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD Players",
+			"item": [
+				{
+					"name": "Create Player",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Player X\",\r\n    \"age\": 25,\r\n    \"experienceMonths\": 36,\r\n    \"teamId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/players"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Player",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Player X\",\r\n    \"age\": 27,\r\n    \"experienceMonths\": 38,\r\n    \"teamId\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/players/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Player",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/players/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Players",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/players"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Player",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/players/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"playerId\": 2,\r\n    \"buyingTeamId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/transfers"
+			},
+			"response": []
+		}
+	]
+}
